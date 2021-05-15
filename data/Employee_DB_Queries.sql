@@ -13,3 +13,9 @@ from employees where extract(year from "hire_date") = 1986;
 select employees.last_name, employees.first_name, employees.emp_no, dept_manager.dept_no, departments.dept_name
 from employees inner join dept_manager on employees.emp_no = dept_manager.emp_no
 	inner join departments on dept_manager.dept_no = departments.dept_no;
+	
+-- query question #4
+
+select employees.last_name, employees.first_name, employees.emp_no, departments.dept_name
+from employees inner join dept_emp on employees.emp_no = dept_emp.emp_no
+	inner join departments on dept_emp.dept_no = departments.dept_no;
