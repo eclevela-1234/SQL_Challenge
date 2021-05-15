@@ -23,5 +23,25 @@ from employees inner join dept_emp on employees.emp_no = dept_emp.emp_no
 -- query question #5
 
 select employees.first_name, employees.last_name, employees.sex
-from employees where employees.first_name = 'Hercules' and employees.last_name like 'B%'
+from employees where employees.first_name = 'Hercules' and employees.last_name like 'B%';
 
+-- query question #6
+
+select employees.emp_no, employees.last_name, employees.first_name,  departments.dept_name
+from employees inner join dept_emp on employees.emp_no = dept_emp.emp_no
+	inner join departments on dept_emp.dept_no = departments.dept_no
+where departments.dept_name = 'Sales'
+	
+-- query question #7
+
+select employees.emp_no, employees.last_name, employees.first_name,  departments.dept_name
+from employees inner join dept_emp on employees.emp_no = dept_emp.emp_no
+	inner join departments on dept_emp.dept_no = departments.dept_no
+where departments.dept_name = 'Sales' or departments.dept_name = 'Development'
+
+-- query question #8
+
+select employees.last_name, count(employees.last_name)
+from employees
+group by employees.last_name
+order by count(employees.last_name) desc;
