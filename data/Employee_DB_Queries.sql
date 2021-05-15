@@ -19,3 +19,9 @@ from employees inner join dept_manager on employees.emp_no = dept_manager.emp_no
 select employees.last_name, employees.first_name, employees.emp_no, departments.dept_name
 from employees inner join dept_emp on employees.emp_no = dept_emp.emp_no
 	inner join departments on dept_emp.dept_no = departments.dept_no;
+
+-- query question #5
+
+select employees.first_name, employees.last_name, employees.sex
+from employees where employees.first_name = 'Hercules' and employees.last_name like 'B%'
+
