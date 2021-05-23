@@ -7,3 +7,5 @@
 
 ![This was super easy!](Employee_DB_ERD.pgerd.png)
 
+###  2. Schema script was created in PG Admin and can be found in the 'PG_Scripts' folder.
+###  3. Query scripts can also be found in that folder. 
